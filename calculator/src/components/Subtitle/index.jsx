@@ -4,7 +4,7 @@ const Subtitle = ({ title, descr, subdescr }) => {
   return (
     <>
       <h3> {title}</h3>
-      <p>{descr}</p> changes..
+      <p>{descr}</p>
       <p> {subdescr}</p>
     </>
   );

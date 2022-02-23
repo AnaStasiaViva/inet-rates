@@ -7,7 +7,6 @@ export function SocialCheckbox({ data }) {
   return (
     <div>
       <div>Соцсети</div>
-
       <Social data={data} />
     </div>
   );

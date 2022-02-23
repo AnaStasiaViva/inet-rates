@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import Checkbox from "@mui/material/Checkbox";
 import Favorite from "@mui/icons-material/Favorite";
@@ -13,24 +13,31 @@ import {
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-const icons = [
-  <FaWhatsapp size={25} />,
-  <FaViber size={25} />,
-  <FaTelegramPlane size={25} />,
-  <FaDiscord size={25} />,
-];
+const icons = {
+  whatsapp: FaWhatsapp,
+  viber: FaViber,
+  telegram: FaTelegramPlane,
+  discord: FaDiscord,
+};
 
 function Messenger({ data }) {
-  const merged = data && [data, icons];
+  const computedData = useMemo(() => {
+    return data
+      ?.map((el) => ({
+        ...el,
+        icon: icons[el.name],
+      }))
+      .filter((el) => el.icon);
+  }, [data]);
 
   return (
     <div>
-      {icons.map((icon) => {
+      {computedData.map((el) => {
         return (
           <Checkbox
-            //key={key}
+            key={el.id}
             {...label}
-            icon={icon}
+            icon={<el.icon size={25} />}
             checkedIcon={<BookmarkIcon />}
           />
         );
