@@ -1,0 +1,163 @@
+{
+  "rates": {
+    "minutes_title": "Минуты",
+    "internet_title": "Интернет",
+    "minutes_descr": "На теле2 России безлимитно",
+    "minutes_subdescr": " на другие мобильные номера домашнего региона",
+
+    "minutes": [
+      {
+        "id": "min_skjhfkshfks",
+        "value": 100,
+        "selected": null,
+        "price": 100,
+        "category_name": "minutes"
+      },
+      {
+        "id": "min_jkhhkhftrks",
+        "value": 200,
+        "selected": null,
+        "price": 200,
+        "category_name": "minutes"
+      },
+      {
+        "id": "min_skoii09iopip",
+        "value": 300,
+        "selected": null,
+        "price": 300,
+        "category_name": "minutes"
+      },
+      {
+        "id": "min_skjhfersrsdfdt",
+        "value": 600,
+        "selected": null,
+        "price": 600,
+        "category_name": "minutes"
+      }
+    ],
+    "sms": [
+      {
+        "id": "sms_skjhfersrsdfdt",
+        "value": 0,
+        "selected": null,
+        "price": 0,
+        "category_name": "sms"
+      },
+      {
+        "id": "sms_skjhfersrsdfdt",
+        "value": 50,
+        "selected": null,
+        "price": 50,
+        "category_name": "sms"
+      },
+      {
+        "id": "sms_skjhfersrsdfdt",
+        "value": 100,
+        "selected": null,
+        "price": 100,
+        "category_name": "sms"
+      },
+      {
+        "id": "sms_skjhfersrsdfdt",
+        "value": 150,
+        "selected": null,
+        "price": 150,
+        "category_name": "sms"
+      }
+    ],
+    "internet": [
+      {
+        "id": "inet_skjhfersrsdfdt",
+        "value": 5,
+        "selected": null,
+        "price": 100,
+        "category_name": "internet"
+      },
+      {
+        "id": "inet_skjhfersrsdfdt",
+        "value": 10,
+        "selected": null,
+        "price": 200,
+        "category_name": "internet"
+      },
+      {
+        "id": "inet_skjhfersrsdfdt",
+        "value": 15,
+        "selected": null,
+        "price": 300,
+        "category_name": "internet"
+      },
+      {
+        "id": "inet_skjhfersrsdfdt",
+        "value": 25,
+        "selected": null,
+        "price": 400,
+        "category_name": "internet"
+      }
+    ],
+    "social": [
+      {
+        "name": "facebook",
+        "selected": false,
+        "price": 20,
+        "category_name": "social"
+      },
+      {
+        "name": "vk",
+        "id": "oiwoidf565josfjosjf98",
+        "selected": false,
+        "price": 20,
+        "category_name": "social"
+      },
+      {
+        "name": "ok",
+        "id": "wiupkdkv45",
+        "selected": false,
+        "price": 20,
+        "category_name": "social"
+      },
+      {
+        "name": "instagram",
+        "id": "kjsdowkp089483",
+        "selected": false,
+        "price": 60,
+        "category_name": "social"
+      },
+      {
+        "name": "tiktok",
+        "id": "kcjsnvjdhbi0897",
+        "selected": false,
+        "price": 60,
+        "category_name": "social"
+      }
+    ],
+
+    "messenger": [
+      {
+        "name": "whatsapp",
+        "id": "sdfgjs454f76372",
+        "selected": false,
+        "category_name": "messenger"
+      },
+      {
+        "name": "viber",
+        "id": "iudshfiwhf874937",
+        "selected": false,
+        "category_name": "messenger"
+      },
+
+      {
+        "name": "telegram",
+        "id": "kjksnlgb983943",
+        "selected": false,
+        "category_name": "messenger"
+      },
+      {
+        "name": "discord",
+        "id": "jhsdfkjfl87383",
+        "selected": false,
+        "category_name": "messenger"
+      }
+    ]
+  }
+}

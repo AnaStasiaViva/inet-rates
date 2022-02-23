@@ -1,0 +1,87 @@
+[
+  {
+    "rates": {
+      "minutes_title": "",
+      "sms_title": "",
+      "minutes_descr": "",
+      "sms_descr": "",
+
+      "minutes": [
+        {
+          "min_id": "min_skjhfkshfks",
+          "amout": 100
+        },
+        {
+          "min_id": "min_jkhhkhftrks",
+          "amout": 200
+        },
+        {
+          "min_id": "min_skoii09iopip",
+          "amout": 300
+        },
+        {
+          "min_id": "min_skjhfersrsdfdt",
+          "amout": 600
+        }
+      ],
+      "sms": []
+    }
+  },
+  {
+    "social": [
+      {
+        "name": "facebook",
+        "social_id": "oweiu343ouwofu",
+        "selected_social": false
+      },
+      {
+        "name": "vk",
+        "social_id": "oiwoidf565josfjosjf98",
+        "selected_social": false
+      },
+      {
+        "name": "ok",
+        "social_id": "wiupkdkv45",
+        "selected_social": false
+      },
+      {
+        "name": "instagram",
+        "social_id": "kjsdowkp089483",
+        "selected_social": false
+      },
+      {
+        "name": "tiktok",
+        "social_id": "kcjsnvjdhbi0897",
+        "selected_social": false
+      }
+    ],
+
+    "messenger": [
+      {
+        "name": "whatsapp",
+        "social_id": "sdfgjs454f76372",
+        "selected_messenger": false
+      },
+      {
+        "name": "viber",
+        "social_id": "iudshfiwhf874937",
+        "selected_messenger": false
+      },
+      {
+        "name": "wechat",
+        "social_id": "kjdskjs9879",
+        "selected_messenger": false
+      },
+      {
+        "name": "telegram",
+        "social_id": "kjksnlgb983943",
+        "selected_messenger": false
+      },
+      {
+        "name": "discord",
+        "social_id": "jhsdfkjfl87383",
+        "selected_messenger": false
+      }
+    ]
+  }
+]
