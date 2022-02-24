@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Popper from "@mui/material/Popper";
 import Typography from "@mui/material/Typography";
@@ -7,10 +7,10 @@ import Button from "@mui/material/Button";
 import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
 
-export default function Popper() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [open, setOpen] = React.useState(false);
-  const [placement, setPlacement] = React.useState();
+const PopperInfo = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState();
 
   const handleClick = (newPlacement) => (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,11 +29,17 @@ export default function Popper() {
           </Fade>
         )}
       </Popper>
-      <Grid container justifyContent="center">
-        <Grid item>
-          <Button onClick={handleClick("top")}>i</Button>
-        </Grid>
+
+      <Grid item>
+        <Button
+          style={{ borderRadius: "50%", maxHeight: "20px", maxWidth: "20px" }}
+          onClick={handleClick("top")}
+        >
+          i
+        </Button>
       </Grid>
     </Box>
   );
-}
+};
+
+export default PopperInfo;

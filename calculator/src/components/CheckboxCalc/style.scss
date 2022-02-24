@@ -1,5 +1,14 @@
 .Checkbox {
   margin-bottom: 25px;
+  //background: pink;
+
+  .popper-wrapper {
+    display: flex;
+    flex-direction: row;
+    //background: yellow;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .Socials-wrapper {
