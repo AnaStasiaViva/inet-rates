@@ -54,6 +54,7 @@ const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   borderRadius: "50%",
   justifyContent: "center",
   alignItems: "center",
+  cursor: "pointer",
   ...(ownerState.active && {
     backgroundImage:
       "linear-gradient( 95deg,#3b3b3a 0%,#2e2d2d 50%,#0e0d0e 100%)",
@@ -107,7 +108,13 @@ const CustomizedSteppers = ({ data, val }) => {
   const onCurrentStepHandler = (idx, item, itemId) => {
     setCurrentStep(idx);
     const exist = onCheckIfItemWasAddedHandler(itemId);
-    dispatch(addRates(item));
+    if (exist) {
+      setCurrentStep(null);
+      dispatch(removeSelectedCheckbox(itemId));
+    } else {
+      setCurrentStep(idx);
+      dispatch(addRates(item));
+    }
   };
 
   return (
