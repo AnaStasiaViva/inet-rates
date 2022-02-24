@@ -1,0 +1,35 @@
+.MainLayout {
+  margin: 0 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .main-info_header {
+    margin-bottom: 30px;
+  }
+
+  .common-padding {
+    padding-left: 7%;
+  }
+  .btn-conditional {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price_total {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(211, 211, 211, 0.425);
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 20px 0 20px 7%;
+  }
+  .subinfo {
+    width: 100%;
+    white-space: nowrap;
+  }
+}

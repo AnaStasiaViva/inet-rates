@@ -1,0 +1,15 @@
+.Checkbox {
+  margin-bottom: 25px;
+}
+
+.Socials-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .socials-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    align-items: center;
+  }
+}
