@@ -43,7 +43,7 @@ const MainLayout = () => {
     <div className="MainLayout">
       {status && status === "loading" && <Loader />}
       <div className="main-info_header common-padding">
-        <h1>Настройте тариф :)...</h1>
+        <h1>Настройте тариф :)</h1>
         <Subtitle
           title={rates.minutes_title}
           descr={rates.minutes_descr}
