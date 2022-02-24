@@ -30,19 +30,18 @@ const iconsColor = {
 };
 
 function Messenger({ data }) {
+  const addedRates = useSelector((state) => state.ratesReducer.addedRates);
   const dispatch = useDispatch();
 
   const [isChecked, setIsChecked] = useState(false);
   const [addedToStateIdx, setAddedToStateIdx] = useState(null);
-  const addedRates = useSelector((state) => state.ratesReducer.addedRates);
-  //console.log(addedRates, "from redux ====");
 
   const onCheckIfItemWasAddedHandler = (id) => {
     return addedRates.some((rate) => rate.id === id);
   };
 
   const onCurrentStepHandler = (idx, item) => {
-    setIsChecked(true);
+    //setIsChecked(true);
     setAddedToStateIdx(idx);
     const exist = onCheckIfItemWasAddedHandler(idx);
     if (exist) dispatch(removeSelectedCheckbox(idx));
@@ -58,8 +57,6 @@ function Messenger({ data }) {
       }))
       .filter((el) => el.icon);
   }, [data]);
-
-  console.log(data, "messanger===");
 
   return (
     <div className="Socials-wrapper">

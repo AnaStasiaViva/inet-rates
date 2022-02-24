@@ -44,11 +44,10 @@ const MainLayout = () => {
       {status && status === "loading" && <Loader />}
       <div className="main-info_header common-padding">
         <h1>Настройте тариф :)</h1>
-        <Subtitle
-          title={rates.minutes_title}
-          descr={rates.minutes_descr}
-          subdescr={rates.minutes_subdescr}
-        />
+        <Subtitle title={rates.minutes_title}>
+          <p>{rates.minutes_descr}</p>
+          <p> {rates.minutes_subdescr}</p>
+        </Subtitle>
       </div>
 
       <StepperCalc data={rates.minutes} val="мин" />

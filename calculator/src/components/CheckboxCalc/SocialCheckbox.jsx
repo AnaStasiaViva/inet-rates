@@ -34,7 +34,6 @@ function Social({ data }) {
   const dispatch = useDispatch();
 
   const [isChecked, setIsChecked] = useState(false);
-  //const [addedToStateIdx, setAddedToStateIdx] = useState(null);
   const addedRates = useSelector((state) => state.ratesReducer.addedRates);
 
   const onCheckIfItemWasAddedHandler = (id) => {

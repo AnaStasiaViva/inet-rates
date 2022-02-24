@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./style.scss";
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
@@ -12,7 +13,10 @@ import StepConnector, {
   stepConnectorClasses,
 } from "@mui/material/StepConnector";
 import { useDispatch, useSelector } from "react-redux";
-import { addRates } from "../../store/slices/ratesSlice";
+import {
+  addRates,
+  removeSelectedCheckbox,
+} from "../../store/slices/ratesSlice";
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
@@ -91,11 +95,18 @@ ColorlibStepIcon.propTypes = {
 };
 
 const CustomizedSteppers = ({ data, val }) => {
+  const addedRates = useSelector((state) => state.ratesReducer.addedRates);
   const dispatch = useDispatch();
-  const [currentStep, setCurrentStep] = useState(0);
 
-  const onCurrentStepHandler = (idx, item) => {
+  const [currentStep, setCurrentStep] = useState(null);
+
+  const onCheckIfItemWasAddedHandler = (id) => {
+    return addedRates.some((rate) => rate.id === id);
+  };
+
+  const onCurrentStepHandler = (idx, item, itemId) => {
     setCurrentStep(idx);
+    const exist = onCheckIfItemWasAddedHandler(itemId);
     dispatch(addRates(item));
   };
 
@@ -110,7 +121,7 @@ const CustomizedSteppers = ({ data, val }) => {
           {data?.map((label, idx) => (
             <Step key={label.id}>
               <StepLabel
-                onClick={() => onCurrentStepHandler(idx, label)}
+                onClick={() => onCurrentStepHandler(idx, label, label.id)}
                 StepIconComponent={ColorlibStepIcon}
               >
                 {label.value} {val}
