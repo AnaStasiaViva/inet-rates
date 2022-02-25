@@ -2,7 +2,6 @@ import React from "react";
 import "./style.scss";
 import Messenger from "./MessangerCheckbox";
 import Social from "./SocialCheckbox";
-
 import PopperInfo from "../Popper";
 
 export function SocialCheckbox({ data }) {
@@ -11,9 +10,6 @@ export function SocialCheckbox({ data }) {
       <div className="popper-wrapper">
         <div>
           <span>Соцсети</span>
-        </div>
-        <div>
-          <PopperInfo />
         </div>
       </div>
       <Social data={data} />

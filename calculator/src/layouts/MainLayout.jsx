@@ -6,6 +6,7 @@ import {
   MessengerCheckbox,
   SocialCheckbox,
 } from "../components/CheckboxCalc/CheckboxCalc";
+import Container from "@mui/material/Container";
 
 import "./style.scss";
 import StepperCalc from "../components/StepperCalc/StepperCalc";
@@ -21,9 +22,6 @@ const MainLayout = () => {
   const status = useSelector((state) => state.ratesReducer.status);
   const totalPrice = useSelector((state) => state.ratesReducer.totalPrice);
   const selectedRates = useSelector((state) => state.ratesReducer.addedRates);
-  const discountAmount = useSelector(
-    (state) => state.ratesReducer.discountAmount
-  );
 
   const dispatch = useDispatch();
 
@@ -41,43 +39,45 @@ const MainLayout = () => {
 
   return (
     <div className="MainLayout">
-      {status && status === "loading" && <Loader />}
-      <div className="main-info_header common-padding">
-        <h1>Настройте тариф :)</h1>
-        <Subtitle title={rates.minutes_title}>
-          <p>{rates.minutes_descr}</p>
-          <p> {rates.minutes_subdescr}</p>
-        </Subtitle>
-      </div>
+      <Container maxWidth="lg">
+        {status && status === "loading" && <Loader />}
+        <div className="main-info_header common-padding">
+          <h1>Настройте тариф :)</h1>
+          <Subtitle title={rates.minutes_title}>
+            <p>{rates.minutes_descr}</p>
+            <p> {rates.minutes_subdescr}</p>
+          </Subtitle>
+        </div>
 
-      <StepperCalc data={rates.minutes} val="мин" />
-      <div className="btn-conditional common-padding">
-        <BtnAdd onOpen={handleOpen} open={open}></BtnAdd>
-        <Typography variant="p" className="subinfo">
-          Используйте вместе с тарифом
-        </Typography>
-      </div>
+        <StepperCalc data={rates.minutes} val="мин" />
+        <div className="btn-conditional common-padding">
+          <BtnAdd onOpen={handleOpen} open={open}></BtnAdd>
+          <Typography variant="p" className="subinfo">
+            Используйте вместе с тарифом
+          </Typography>
+        </div>
 
-      <Collapse
-        in={open}
-        timeout={{
-          enter: 300,
-          exit: 200,
-        }}
-      >
-        <StepperCalc data={rates.sms} val="смс" />
-      </Collapse>
+        <Collapse
+          in={open}
+          timeout={{
+            enter: 300,
+            exit: 200,
+          }}
+        >
+          <StepperCalc data={rates.sms} val="смс" />
+        </Collapse>
 
-      <div className="main-info_header common-padding">
-        <Subtitle title={rates.internet_title} />
-      </div>
-      <StepperCalc data={rates.internet} val="ГБ" />
+        <div className="main-info_header common-padding">
+          <Subtitle title={rates.internet_title} />
+        </div>
+        <StepperCalc data={rates.internet} val="ГБ" />
 
-      <div className="common-padding">
-        <SocialCheckbox data={rates.social} />
-        <MessengerCheckbox data={rates.messenger} />
-      </div>
-      <div className="price_total common-padding">{totalPrice} P/мес</div>
+        <div className="common-padding">
+          <SocialCheckbox data={rates.social} />
+          <MessengerCheckbox data={rates.messenger} />
+        </div>
+        <div className="price_total common-padding">{totalPrice} P/мес</div>
+      </Container>
     </div>
   );
 };

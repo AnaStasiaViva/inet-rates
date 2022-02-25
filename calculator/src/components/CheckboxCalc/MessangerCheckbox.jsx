@@ -33,16 +33,11 @@ function Messenger({ data }) {
   const addedRates = useSelector((state) => state.ratesReducer.addedRates);
   const dispatch = useDispatch();
 
-  const [isChecked, setIsChecked] = useState(false);
-  const [addedToStateIdx, setAddedToStateIdx] = useState(null);
-
   const onCheckIfItemWasAddedHandler = (id) => {
     return addedRates.some((rate) => rate.id === id);
   };
 
   const onCurrentStepHandler = (idx, item) => {
-    //setIsChecked(true);
-    setAddedToStateIdx(idx);
     const exist = onCheckIfItemWasAddedHandler(idx);
     if (exist) dispatch(removeSelectedCheckbox(idx));
     if (!exist) dispatch(addRates(item));
